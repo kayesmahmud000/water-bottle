@@ -1,5 +1,5 @@
 import './bottle.css'
-const Bottle = ({bottle}) => {
+const Bottle = ({bottle, handleCard}) => {
     const {name, img, seller, price, stock, ratings}=bottle;
     return (
         <div className="bottle">
@@ -8,6 +8,7 @@ const Bottle = ({bottle}) => {
             <p>Price: {price}$</p>
             <p><small>Stock: {stock}</small></p>
             <p><small>Rating: {ratings}</small></p>
+            <button onClick={()=>handleCard(bottle)}>Purchase</button>
         </div>
     );
 };
